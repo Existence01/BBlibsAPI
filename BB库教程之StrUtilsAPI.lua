@@ -3,100 +3,100 @@
 			================================
 			================================
 			================================
-			===BB¿âÏê½âÖ®StrUtilsAPI.lua=====
+			===BBåº“è¯¦è§£ä¹‹StrUtilsAPI.lua=====
 			================================
 			================================
 			================================
-			===========================By.Óğ
+			===========================By.ç¾½
 ]]
 
 --[[
-			½«×Ö·û´®×ªÎªBase64±àÂë
-			²ÎÊı1:basestr:ĞèÒª±àÂëµÄ×Ö·û´®
+			å°†å­—ç¬¦ä¸²è½¬ä¸ºBase64ç¼–ç 
+			å‚æ•°1:basestr:éœ€è¦ç¼–ç çš„å­—ç¬¦ä¸²
 ]]
-local basestr = "Hello!ÎÒ½ĞÓğ"
-local str64 = str.toBase64(basestr)
-print(str64)	--Êä³öSGVsbG8hMeaIkeWPq-e-vQ==
-
---[[
-			ÎªBase64½âÂë
-			²ÎÊı1:basestr:ĞèÒª½âÂëµÄ×Ö·û´®
-]]
-local dec64 = str.fromBase64(str64)
-print(dec64)	--Êä³öHello!ÎÒ½ĞÓğ
-
---[[
-			Ê¹ÓÃsha1¼ÓÃÜ×Ö·û´®
-			²ÎÊı1:sha1str:ĞèÒª¼ÓÃÜµÄ×Ö·û´®
-]]
-local sha1str = "Hello!ÎÒ½ĞÓğ"
-local sha1 = str.SHA1(sha1str)
-print(sha1)	--Êä³öd956524b1d3f45e25e7fb09c8a55cc8c65930801
-
---[[
-			Éú³Écrc32Ğ£ÑéÂë
-			²ÎÊı1:ĞèÒªÉú³ÉµÄ×Ö·û´®
-]]
-local crc = "Hello!ÎÒ½ĞÓğ"
-local crc = str.CRC32(crc)
-print(crc)	--Êä³ö207536055
-
---[[
-			Éú³ÉFCS16Ğ£ÑéÂë
-			²ÎÊı1:ĞèÒªÉú³ÉµÄ×Ö·û´®
-]]
-local fcs = "Hello!ÎÒ½ĞÓğ"
-local fcs = str.FCS16(fcs)
-print(fcs)	--Êä³ö54420
-
---[[
-			Éú³ÉFCS32Ğ£ÑéÂë
-			²ÎÊı1:ĞèÒªÉú³ÉµÄ×Ö·û´®
-]]
-local fcs = "Hello!ÎÒ½ĞÓğ"
-local fcs = str.FCS32(fcs)
-print(fcs)	--Êä³ö375729181
-
---[[
-			¼ÓÃÜ×Ö·û´®
-			²ÎÊı1:ĞèÒª¼ÓÃÜµÄ×Ö·û´®
-			²ÎÊı2:½âÃÜÃÜÔ¿
-]]
-local strenc = "Hello!ÎÒ½ĞÓğ"
-local key = "ÎÒ½ĞÉ¶??"
-local enc = str.encrypt(strenc,key)
-print(enc)	--Êä³öV2P4X4O343E4Q494M3V2C3L5P5S5M4A27955I5R7F546R7Z7Z7
-
---[[
-			½âÃÜ×Ö·û´®
-			²ÎÊı1:ĞèÒª½âÃÜµÄ×Ö·û´®
-			²ÎÊı2:½âÃÜÃÜÔ¿
-]]
-local dec = str.decrypt(enc,key)
-print(dec)	--Êä³öHello!ÎÒ½ĞÓğ
 
 local str = require("StrUtilsAPI")
+local basestr = "Hello!æˆ‘å«ç¾½"
+local str64 = str.toBase64(basestr)
+print(str64)	--è¾“å‡ºSGVsbG8hMeaIkeWPq-e-vQ==
 
---½«×Ö·û´®ÉèÖÃÎªURL±àÂë
+--[[
+			ä¸ºBase64è§£ç 
+			å‚æ•°1:basestr:éœ€è¦è§£ç çš„å­—ç¬¦ä¸²
+]]
+local dec64 = str.fromBase64(str64)
+print(dec64)	--è¾“å‡ºHello!æˆ‘å«ç¾½
+
+--[[
+			ä½¿ç”¨sha1åŠ å¯†å­—ç¬¦ä¸²
+			å‚æ•°1:sha1str:éœ€è¦åŠ å¯†çš„å­—ç¬¦ä¸²
+]]
+local sha1str = "Hello!æˆ‘å«ç¾½"
+local sha1 = str.SHA1(sha1str)
+print(sha1)	--è¾“å‡ºd956524b1d3f45e25e7fb09c8a55cc8c65930801
+
+--[[
+			ç”Ÿæˆcrc32æ ¡éªŒç 
+			å‚æ•°1:éœ€è¦ç”Ÿæˆçš„å­—ç¬¦ä¸²
+]]
+local crc = "Hello!æˆ‘å«ç¾½"
+local crc = str.CRC32(crc)
+print(crc)	--è¾“å‡º207536055
+
+--[[
+			ç”ŸæˆFCS16æ ¡éªŒç 
+			å‚æ•°1:éœ€è¦ç”Ÿæˆçš„å­—ç¬¦ä¸²
+]]
+local fcs = "Hello!æˆ‘å«ç¾½"
+local fcs = str.FCS16(fcs)
+print(fcs)	--è¾“å‡º54420
+
+--[[
+			ç”ŸæˆFCS32æ ¡éªŒç 
+			å‚æ•°1:éœ€è¦ç”Ÿæˆçš„å­—ç¬¦ä¸²
+]]
+local fcs = "Hello!æˆ‘å«ç¾½"
+local fcs = str.FCS32(fcs)
+print(fcs)	--è¾“å‡º375729181
+
+--[[
+			åŠ å¯†å­—ç¬¦ä¸²
+			å‚æ•°1:éœ€è¦åŠ å¯†çš„å­—ç¬¦ä¸²
+			å‚æ•°2:è§£å¯†å¯†é’¥
+]]
+local strenc = "Hello!æˆ‘å«ç¾½"
+local key = "æˆ‘å«å•¥??"
+local enc = str.encrypt(strenc,key)
+print(enc)	--è¾“å‡ºV2P4X4O343E4Q494M3V2C3L5P5S5M4A27955I5R7F546R7Z7Z7
+
+--[[
+			è§£å¯†å­—ç¬¦ä¸²
+			å‚æ•°1:éœ€è¦è§£å¯†çš„å­—ç¬¦ä¸²
+			å‚æ•°2:è§£å¯†å¯†é’¥
+]]
+local dec = str.decrypt(enc,key)
+print(dec)	--è¾“å‡ºHello!æˆ‘å«ç¾½
+
+--å°†å­—ç¬¦ä¸²è®¾ç½®ä¸ºURLç¼–ç 
 local url = str.urlEncode("http://xx.com")
 print(url)	--http%3A%2F%2Fxx%2Ecom
 
---½âÎöURL±àÂë
+--è§£æURLç¼–ç 
 local url = str.urlDecode(url)
 print(url)	--http://xx.com
 
---ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇÒ»¸öÓÊÏäµØÖ·
---ÊÇÔò·µ»Øtrue,·ñÔò·µ»Øfalse
+--åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯ä¸€ä¸ªé‚®ç®±åœ°å€
+--æ˜¯åˆ™è¿”å›true,å¦åˆ™è¿”å›false
 local email = str.isEmailAddress('123456@qq.com')
 print(email)
 
---½«×Ö·û´®°´³¤¶ÈÇĞ¸î³Étable
+--å°†å­—ç¬¦ä¸²æŒ‰é•¿åº¦åˆ‡å‰²æˆtable
 local chunk = str.chunk('123456@qq.com',2)
 for k,v in ipairs(chunk) do
 	print(k,'=',v)
 end
 --[[
-Êä³ö
+è¾“å‡º
 1	=	12
 2	=	34
 3	=	56
@@ -106,94 +106,94 @@ end
 7	=	m
 ]]
 
---²éÕÒ×Ö·û´®ÖĞÄ³¸ö×Ö·ûµÚÒ»´Î³öÏÖµÄÎ»ÖÃ
+--æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸­æŸä¸ªå­—ç¬¦ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®
 local find = str.find('ttt2355@qq.com==qq','qq')
-print(find)	--Êä³ö9
+print(find)	--è¾“å‡º9
 
---½«×Ö·û´®°´Ö¸¶¨×Ö·ûÇĞ¸î³Étable
+--å°†å­—ç¬¦ä¸²æŒ‰æŒ‡å®šå­—ç¬¦åˆ‡å‰²æˆtable
 local seperate = str.seperate('213|345|567|000','|')
 for k,v in ipairs(seperate) do
 	print(k,'=',v)
 end
 --[[
-Êä³ö
+è¾“å‡º
 1	=	213
 2	=	345
 3	=	567
 4	=	000
 ]]
 
---½«×Ö·û´®Ä³¸öÖµÌæ»»³ÉĞÂµÄ×Ö·û
+--å°†å­—ç¬¦ä¸²æŸä¸ªå€¼æ›¿æ¢æˆæ–°çš„å­—ç¬¦
 local replace = str.replace('213|345|567|000','|','#')
-print(replace)	--Êä³ö213#345#567#000
+print(replace)	--è¾“å‡º213#345#567#000
 
---½«×Ö·û´®Ëæ»úÖØ×é
+--å°†å­—ç¬¦ä¸²éšæœºé‡ç»„
 local jumble = str.jumble('aaaabbbbcccc')
 print(jumble)	--babccacacabb
 
---¼ÓÃÜ×Ö·û´®
+--åŠ å¯†å­—ç¬¦ä¸²
 --local base = str.toBase('asdvsd546234','asfvwq')
 --print(base)
---½âÃÜ×Ö·û´®
+--è§£å¯†å­—ç¬¦ä¸²
 --local dec = str.fromBase(base,'asfvwq')
 --print(dec)
 
---½«Ã¿¸ö×Ö·û´®×ªÎª¶ş½øÖÆ
-local encbin = str.toBinary('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(encbin)	--Êä³ö10110100:11110011:10111100:11010010:10111010:11000011:1111110:11001110:11010010:10111101:11010000:11010011:11110000
+--å°†æ¯ä¸ªå­—ç¬¦ä¸²è½¬ä¸ºäºŒè¿›åˆ¶
+local encbin = str.toBinary('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(encbin)	--è¾“å‡º10110100:11110011:10111100:11010010:10111010:11000011:1111110:11001110:11010010:10111101:11010000:11010011:11110000
 
---½«¶ş½øÖÆ×Ö·û×ªÎª×Ö·û´®
+--å°†äºŒè¿›åˆ¶å­—ç¬¦è½¬ä¸ºå­—ç¬¦ä¸²
 local decbin = str.fromBinary(encbin)
-print(decbin)--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+print(decbin)--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
---½«Ã¿¸ö×Ö·û´®×ªÎª°Ë½øÖÆ
-local enoctal = str.toOctal('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(enoctal)	--Êä³ö264:363:274:322:272:303:176:316:322:275:320:323:360
+--å°†æ¯ä¸ªå­—ç¬¦ä¸²è½¬ä¸ºå…«è¿›åˆ¶
+local enoctal = str.toOctal('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(enoctal)	--è¾“å‡º264:363:274:322:272:303:176:316:322:275:320:323:360
 
---½«°Ë½øÖÆ×Ö·û×ªÎª×Ö·û´®
+--å°†å…«è¿›åˆ¶å­—ç¬¦è½¬ä¸ºå­—ç¬¦ä¸²
 local deoctal = str.fromOctal(enoctal)
-print(deoctal)	--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+print(deoctal)	--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
---½«Ã¿¸ö×Ö·û´®×ªÎªÊ®Áù½øÖÆ
-local enchex = str.toHex('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(enchex)	--Êä³öB4:F3:BC:D2:BA:C3:7E:CE:D2:BD:D0:D3:F0
+--å°†æ¯ä¸ªå­—ç¬¦ä¸²è½¬ä¸ºåå…­è¿›åˆ¶
+local enchex = str.toHex('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(enchex)	--è¾“å‡ºB4:F3:BC:D2:BA:C3:7E:CE:D2:BD:D0:D3:F0
 
---½«Ê®Áù½øÖÆ×Ö·û×ªÎª×Ö·û´®
+--å°†åå…­è¿›åˆ¶å­—ç¬¦è½¬ä¸ºå­—ç¬¦ä¸²
 local dechex = str.fromHex(enchex)
-print(dechex)	--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+print(dechex)	--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
---½«×Ö·û´®×ªÎªbase36±àÂë
-local base36 = str.toBase36('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(base36)	--Êä³ö50:6R:58:5U:56:5F:3I:5Q:5U:59:5S:5V:6O
+--å°†å­—ç¬¦ä¸²è½¬ä¸ºbase36ç¼–ç 
+local base36 = str.toBase36('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(base36)	--è¾“å‡º50:6R:58:5U:56:5F:3I:5Q:5U:59:5S:5V:6O
 
---½«base36±àÂë×ªÎª×Ö·û´®
+--å°†base36ç¼–ç è½¬ä¸ºå­—ç¬¦ä¸²
 local decbase36 = str.fromBase36(base36)
-print(decbase36)	--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+print(decbase36)	--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
---½«×Ö·û´®×ªÎªbase32±àÂë
-local base32 = str.toBase32('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(base32)	--Êä³öWTZ3ZUV2YN7M5UV52DJ7A
+--å°†å­—ç¬¦ä¸²è½¬ä¸ºbase32ç¼–ç 
+local base32 = str.toBase32('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(base32)	--è¾“å‡ºWTZ3ZUV2YN7M5UV52DJ7A
 
---½«base32±àÂë×ªÎª×Ö·û´®
+--å°†base32ç¼–ç è½¬ä¸ºå­—ç¬¦ä¸²
 local decbase32 = str.fromBase32(base32)
-print(decbase32)	--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+print(decbase32)	--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
 print '============'
---½«×Ö·û´®×ªÎªROT13±àÂë
-local encrot13 = str.rot13('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(encrot13)	--Êä³ö´ó¼ÒºÃ~ÎÒ½ĞÓğ
+--å°†å­—ç¬¦ä¸²è½¬ä¸ºROT13ç¼–ç 
+local encrot13 = str.rot13('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(encrot13)	--è¾“å‡ºå¤§å®¶å¥½~æˆ‘å«ç¾½
 
---½«ROT47±àÂë×ªÎª×Ö·û´®
-local encrot47 = str.rot47('´ó¼ÒºÃ~ÎÒ½ĞÓğ')
-print(encrot47) --´ó¼ÒºÃOÎÒ½ĞÓğ
+--å°†ROT47ç¼–ç è½¬ä¸ºå­—ç¬¦ä¸²
+local encrot47 = str.rot47('å¤§å®¶å¥½~æˆ‘å«ç¾½')
+print(encrot47) --å¤§å®¶å¥½Oæˆ‘å«ç¾½
 
---½«Ã¿¸ö×Ö·û°´charÀàĞÍ±£´æÔÚtable
-local chartab = str.toCharTable('B~234ÓğDEA')
+--å°†æ¯ä¸ªå­—ç¬¦æŒ‰charç±»å‹ä¿å­˜åœ¨table
+local chartab = str.toCharTable('B~234ç¾½DEA')
 for k,v in ipairs(chartab) do
 	print(k,'=',v)
 end
 --[[
-Êä³ö
+è¾“å‡º
 1	=	B
 2	=	~
 3	=	2
@@ -206,18 +206,18 @@ end
 10	=	A
 ]]
 
---½âÎötoCharTable
+--è§£ætoCharTable
 local fct = str.fromCharTable(chartab)
-print(fct)	--Êä³öB~234ÓğDEA
+print(fct)	--è¾“å‡ºB~234ç¾½DEA
 
---½«Ã¿¸ö×Ö·û°´×Ö½Ú±£´æÔÚtable
-local bytetab = str.toByteTable('B~234ÓğDEA')
+--å°†æ¯ä¸ªå­—ç¬¦æŒ‰å­—èŠ‚ä¿å­˜åœ¨table
+local bytetab = str.toByteTable('B~234ç¾½DEA')
 for k,v in ipairs(bytetab) do
 	print(k,'=',v)
 end
 
 --[[
-Êä³ö
+è¾“å‡º
 1	=	B
 2	=	~
 3	=	2
@@ -240,34 +240,34 @@ end
 10	=	65
 ]]
 
---½âÎötoByteTable
+--è§£ætoByteTable
 local decbyte = str.fromByteTable(bytetab)
-print(decbyte)	--Êä³öB~234ÓğDEA
+print(decbyte)	--è¾“å‡ºB~234ç¾½DEA
 
---²éÕÒ×Ö·û´®ÖĞÊÇ·ñ°üº¬Ä³¸ö×Ö·û
---ÕÒµ½·µ»Øtrue,·ñÔò·µ»Øfalse
-local contains = str.contains('´ó¼ÒºÃ|ÎÒ½ĞÓğ','Óğ')
+--æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸­æ˜¯å¦åŒ…å«æŸä¸ªå­—ç¬¦
+--æ‰¾åˆ°è¿”å›true,å¦åˆ™è¿”å›false
+local contains = str.contains('å¤§å®¶å¥½|æˆ‘å«ç¾½','ç¾½')
 print(contains)	--true
 
---²éÕÒ×Ö·û´®ÖĞµÄµÚÒ»¸öÖµÊÇ·ñÎªÄ³¸ö×Ö·û
---ÊÇÔò·µ»Øtrue,·ñÔò·µ»Øfasle
-local startsWith = str.startsWith('´ó¼ÒºÃ|ÎÒ½ĞÓğ','Óğ')
+--æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸­çš„ç¬¬ä¸€ä¸ªå€¼æ˜¯å¦ä¸ºæŸä¸ªå­—ç¬¦
+--æ˜¯åˆ™è¿”å›true,å¦åˆ™è¿”å›fasle
+local startsWith = str.startsWith('å¤§å®¶å¥½|æˆ‘å«ç¾½','ç¾½')
 print(startsWith)	--false
 
---²éÕÒ×Ö·û´®ÖĞµÄ×îºóÒ»¸öÖµÊÇ·ñÎªÄ³¸ö×Ö·û
---ÊÇÔò·µ»Øtrue,·ñÔò·µ»Øfasle
-local endsWith = str.endsWith('´ó¼ÒºÃ|ÎÒ½ĞÓğ','Óğ')
+--æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸­çš„æœ€åä¸€ä¸ªå€¼æ˜¯å¦ä¸ºæŸä¸ªå­—ç¬¦
+--æ˜¯åˆ™è¿”å›true,å¦åˆ™è¿”å›fasle
+local endsWith = str.endsWith('å¤§å®¶å¥½|æˆ‘å«ç¾½','ç¾½')
 print(endsWith)	--true
 
---È¥µô×Ö·û´®Í·Î²µÄ¿Õ¸ñ
-local trim = str.trim('    ´ó¼ÒºÃ ÎÒ ½Ğ Óğ         ')
-print(trim) --Êä³ö´ó¼ÒºÃ ÎÒ ½Ğ Óğ
+--å»æ‰å­—ç¬¦ä¸²å¤´å°¾çš„ç©ºæ ¼
+local trim = str.trim('    å¤§å®¶å¥½ æˆ‘ å« ç¾½         ')
+print(trim) --è¾“å‡ºå¤§å®¶å¥½ æˆ‘ å« ç¾½
 
---½«×Ö·û´®µÚÒ»¸ö×ÖÄ¸±ä´óĞ´
+--å°†å­—ç¬¦ä¸²ç¬¬ä¸€ä¸ªå­—æ¯å˜å¤§å†™
 local flu = str.firstLetterUpper('abcdefg')
 print(flu) --Abcdefg
 
---½«×Ö·û´®³ıµÚÒ»¸ö×ÖÄ¸ÍâµÄËùÓĞ×ÖÄ¸±äĞ¡Ğ´
+--å°†å­—ç¬¦ä¸²é™¤ç¬¬ä¸€ä¸ªå­—æ¯å¤–çš„æ‰€æœ‰å­—æ¯å˜å°å†™
 local tit = str.titleCase('ABCDEA')
 print(tit) --Abcdea
 
@@ -275,38 +275,38 @@ print(tit) --Abcdea
 	---------------------------------
 	---------------------------------
 	---------------------------------
-	=========BITÂß¼­ÔËËã·û===========
+	=========BITé€»è¾‘è¿ç®—ç¬¦===========
 	---------------------------------
 	---------------------------------
 	---------------------------------
 	
-	--×¢Òâ:Ê¹ÓÃÂß¼­ÔËËãĞèÒªĞŞ¸ÄBB¿âÏÂµÄStrUtilsAPI.luaÎÄ¼şÏÂµÄ423ĞĞ,ÕÒµ½local strutils = {},ÔÚÕâÏÂÒ»ĞĞ¼ÓÉÏÕâ¶Î´úÂë
+	--æ³¨æ„:ä½¿ç”¨é€»è¾‘è¿ç®—éœ€è¦ä¿®æ”¹BBåº“ä¸‹çš„StrUtilsAPI.luaæ–‡ä»¶ä¸‹çš„423è¡Œ,æ‰¾åˆ°local strutils = {},åœ¨è¿™ä¸‹ä¸€è¡ŒåŠ ä¸Šè¿™æ®µä»£ç 
 	strutils.bit = bit
-	ÕâÑù¾Í¿ÉÒÔÊ¹ÓÃÂß¼­ÔËËãÁË
+	è¿™æ ·å°±å¯ä»¥ä½¿ç”¨é€»è¾‘è¿ç®—äº†
 ]]
 
---Òì»ò
+--å¼‚æˆ–
 local bit = str.bit
 local bxor = bit.bxor(20,13)
 print(bxor)	--25
 
---Âß¼­Óë
+--é€»è¾‘ä¸
 local band = bit.band(10,2)
 print(band) --2
 
---Âß¼­»ò
+--é€»è¾‘æˆ–
 local bor = bit.bor(10,5)
 print(bor) --15
 
---ÓÒÒÆ
+--å³ç§»
 local r = bit.brshift(13,1)
 print(r)	--6
 
---×óÒÆ
+--å·¦ç§»
 local l = bit.blshift(13,1)
 print(l)	--26
 
---´¦Àí¸ºÊıµÄÒì»ò
+--å¤„ç†è´Ÿæ•°çš„å¼‚æˆ–
 local bxor2 = bit.bxor2(-20,-13)
 print(bxor2)
 
