@@ -15,7 +15,7 @@
 			参数1:basestr:需要编码的字符串
 ]]
 
-local str = require("StrUtilsAPI")
+local str = require("bblibs/StrUtilsAPI")
 local basestr = "Hello!我叫羽"
 local str64 = str.toBase64(basestr)
 print(str64)	--输出SGVsbG8hMeaIkeWPq-e-vQ==
