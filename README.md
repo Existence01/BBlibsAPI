@@ -1,2 +1,2 @@
 # BBlibsAPI
-BB库文档说明
+BB库文档说明及教程
