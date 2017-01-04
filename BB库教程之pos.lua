@@ -3,50 +3,50 @@
 			================================
 			================================
 			================================
-			=======BB¿âÏê½âÖ®pos.lua========
+			=======BBåº“è¯¦è§£ä¹‹pos.lua========
 			================================
 			================================
 			================================
-			============================By.Óð
+			============================By.ç¾½
 ]]
 
-local pos = require("bblibs/pos")
---¼ÆËãÁ½¸öÑÕÉ«µÄ¾«¶È
+local pos = require("bblibs.pos")
+--è®¡ç®—ä¸¤ä¸ªé¢œè‰²çš„ç²¾åº¦
 local color1,color2 = 0x7777,0x4444
---ÕâÀïÒ»¶¨ÒªÓÃbb.degree(color1,color2),¶ø²»ÄÜÊ¹ÓÃbb:degree(color1,color2)
+--è¿™é‡Œä¸€å®šè¦ç”¨bb.degree(color1,color2),è€Œä¸èƒ½ä½¿ç”¨bb:degree(color1,color2)
 local c = pos.degree(color1,color2)
-sysLog(c)	--Êä³ö87,±íÊ¾¾«¶ÈÊÇ87µÄÇé¿öÏÂÄÜÕÒµ½color1µ½color2·¶Î§ÄÚµÄÑÕÉ«
+sysLog(c)	--è¾“å‡º87,è¡¨ç¤ºç²¾åº¦æ˜¯87çš„æƒ…å†µä¸‹èƒ½æ‰¾åˆ°color1åˆ°color2èŒƒå›´å†…çš„é¢œè‰²
 
---¼ÆËãÁ½¸ö×ø±êÖ®¼äµÄ¾àÀë
+--è®¡ç®—ä¸¤ä¸ªåæ ‡ä¹‹é—´çš„è·ç¦»
 local new = pos:new(0,0)
 local tab = {x=100,y=100}
 local dis=new:distanceBetween(tab)
-sysLog(dis)	--Êä³ö141.42135623731,±íÊ¾´Ó×ø±ê0,0µ½×ø±ê100,100µÄ¾àÀë
+sysLog(dis)	--è¾“å‡º141.42135623731,è¡¨ç¤ºä»Žåæ ‡0,0åˆ°åæ ‡100,100çš„è·ç¦»
 
 --[[
-	µ¥»÷
-	²ÎÊý1:sleep:°´ÏÂºóµÄÑÓ³ÙÊ±¼ä,²»Ð´Ä¬ÈÏÊÇ60~80ºÁÃëµÄËæ»úÊý
-	²ÎÊý2:sleep1:ËÉ¿ªºóµÄÑÓ³ÙÊ±¼ä,²»Ð´Ä¬ÈÏÊÇ20ºÁÃë
+	å•å‡»
+	å‚æ•°1:sleep:æŒ‰ä¸‹åŽçš„å»¶è¿Ÿæ—¶é—´,ä¸å†™é»˜è®¤æ˜¯60~80æ¯«ç§’çš„éšæœºæ•°
+	å‚æ•°2:sleep1:æ¾å¼€åŽçš„å»¶è¿Ÿæ—¶é—´,ä¸å†™é»˜è®¤æ˜¯20æ¯«ç§’
 ]]
 --local new = pos:new(100,100)
 --new:click(sleep,sleep1)
 
 --[[
-	¾«È·»¬¶¯
-	²ÎÊý1:move:Ò»¸ötableÀàÐÍ,ÀïÃæµÄx,y±íÊ¾Ô­µã×ø±ê
-	²ÎÊý2:step:»¬¶¯ËÙ¶È,ÖµÔ½´ó»¬¶¯ËÙ¶ÈÔ½´ó,Ä¬ÈÏ20
-	²ÎÊý3,4:sleep1,sleep2:»¬¶¯ÑÓÊ±,Ä¬ÈÏ500,20ºÁÃë
+	ç²¾ç¡®æ»‘åŠ¨
+	å‚æ•°1:move:ä¸€ä¸ªtableç±»åž‹,é‡Œé¢çš„x,yè¡¨ç¤ºåŽŸç‚¹åæ ‡
+	å‚æ•°2:step:æ»‘åŠ¨é€Ÿåº¦,å€¼è¶Šå¤§æ»‘åŠ¨é€Ÿåº¦è¶Šå¤§,é»˜è®¤20
+	å‚æ•°3,4:sleep1,sleep2:æ»‘åŠ¨å»¶æ—¶,é»˜è®¤500,20æ¯«ç§’
 ]]
 	local new = pos:new(100,200)
 	local move = {x=0,y=0}
 	local step = 90
 	local sleep1,sleep2 = 30,40
-	--±íÊ¾ÒÔ×ø±ê0,0ÎªÔ­µã»¬¶¯µ½100,200×ø±êÉÏ
+	--è¡¨ç¤ºä»¥åæ ‡0,0ä¸ºåŽŸç‚¹æ»‘åŠ¨åˆ°100,200åæ ‡ä¸Š
 	--new:touchMoveTo(move,step,sleep1,sleep2)
 
 --[[
-	¼ÆËã½Ç¶È
-	²ÎÊý1:tab:Ò»¸ötableÀàÐÍ,ÀïÃæµÄx,y±íÊ¾Ô­µã×ø±ê
+	è®¡ç®—è§’åº¦
+	å‚æ•°1:tab:ä¸€ä¸ªtableç±»åž‹,é‡Œé¢çš„x,yè¡¨ç¤ºåŽŸç‚¹åæ ‡
 ]]
 	local new = pos:new(150,250)
 	local tab = {x=200,y=200}
@@ -54,19 +54,19 @@ sysLog(dis)	--Êä³ö141.42135623731,±íÊ¾´Ó×ø±ê0,0µ½×ø±ê100,100µÄ¾àÀë
 	sysLog(ang)	--90
 	
 --[[
-	¸ù¾Ý½Ç¶ÈºÍ¾àÀëÕÒµã
-	²ÎÊý1:distance:½Ç¶È
-	²ÎÊý2:angle:¾àÀë
+	æ ¹æ®è§’åº¦å’Œè·ç¦»æ‰¾ç‚¹
+	å‚æ•°1:distance:è§’åº¦
+	å‚æ•°2:angle:è·ç¦»
 ]]
-	--Õâ¸öº¯ÊýÃ»ÓÃ¹ý
+	--è¿™ä¸ªå‡½æ•°æ²¡ç”¨è¿‡
 	local new = pos:new(250,550,0)
 	local polar=new:polarProjection(45, 700)
 	
 	--[[
-		¸ù¾ÝÑÕÉ«µã»÷
-		²ÎÊý1:s:ÑÕÉ«¾«¶È,Ä¬ÈÏ90
+		æ ¹æ®é¢œè‰²ç‚¹å‡»
+		å‚æ•°1:s:é¢œè‰²ç²¾åº¦,é»˜è®¤90
 	]]
 	local new = pos:new(250,550,0x333333)
 	local s=95
-	--±íÊ¾Èç¹û×ø±ê250,550µÄÑÕÉ«¾«¶ÈÔÚ95ÖÐ´æÔÚ0x333333ÑÕÉ«Ôòµã»÷¸Ã×ø±ê
+	--è¡¨ç¤ºå¦‚æžœåæ ‡250,550çš„é¢œè‰²ç²¾åº¦åœ¨95ä¸­å­˜åœ¨0x333333é¢œè‰²åˆ™ç‚¹å‡»è¯¥åæ ‡
 	local polar=new:isColorClick(s)
